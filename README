@@ -2,7 +2,7 @@ This repository contains math optimization examples and code written in python
 
 Optima for several functions are being developed here.
 
-1) Random and Grid Sarch to find optima in 1-D and 2-D function spaces
+1) Random and Grid Search to find optima in 1-D and 2-D function spaces
 
 2) Brent Optimization from scipy for simple convex and non convex univariate functions
 
