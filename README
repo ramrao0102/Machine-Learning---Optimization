@@ -8,3 +8,5 @@ Optima for several functions are being developed here.
 
 3) Nelder meade for non differentiable functions, including the Ackley function
 
+4) BFGS - Broyden, Fletcher, Goldfarb, and Shanno Algorithm Implementation for Local Search Optimization
+
