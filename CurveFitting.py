@@ -70,7 +70,7 @@ pyplot.plot(x_line, y_line, ls = '--', color = 'red')
 
 pyplot.show()
 
-# 5th degree non liner polynomial function
+# 5th degree non linear polynomial function
 
 def objective(x, a, b, c, d, e, f):
     return a*x + b *x**2 + c * x**3 + d * x**4 + e * x**5 + f
