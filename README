@@ -7,3 +7,5 @@ Optima for several functions are being developed here.
 2) brent optimization from scipy for simple convex and non convex univariate functions
 
 3) Nelder meade for non differentiable functions, including the Ackley function
+
+![alt text](C:/Data Science and Analytics/DSA 5900/Math-Optimaztion/ackley_function)
