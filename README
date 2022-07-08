@@ -2,11 +2,11 @@ This repository contains math optimization examples and code written in python
 
 Optima for several functions are being developed here.
 
-1) random and grid search to find optima in 1-D and 2-D function spaces
+1) Random and Grid Sarch to find optima in 1-D and 2-D function spaces
 
-2) brent optimization from scipy for simple convex and non convex univariate functions
+2) Brent Optimization from scipy for simple convex and non convex univariate functions
 
-3) Nelder meade for non differentiable functions, including the Ackley function
+3) Nelder Meade for non differentiable functions, including the Ackley function
 
 4) BFGS - Broyden, Fletcher, Goldfarb, and Shanno Algorithm Implementation for Local Search Optimization
 
