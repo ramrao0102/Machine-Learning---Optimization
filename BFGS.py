@@ -54,6 +54,5 @@ solution = result['x']
 
 evaluation = objective(solution)
 
-# gets stuck on local optima
 
 print('Solution: f(%s) = %.5f' % (solution, evaluation))
