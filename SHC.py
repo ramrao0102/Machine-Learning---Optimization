@@ -109,7 +109,7 @@ for x in solutions:
     
 pyplot.plot(solutions, evaluation1, 'o', color = 'black')
 
-pyplot.xlabel('Improvement No')
+pyplot.xlabel('Bounds Value')
 
 pyplot.ylabel('Evaluation f(x)')
 
