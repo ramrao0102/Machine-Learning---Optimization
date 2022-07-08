@@ -66,20 +66,22 @@ def in_bounds(point, bounds):
 
 # function for stochastic hill climbing
 
-def hillclimbing(objective, bounds, n_iterations, step_size):
+def hillclimbing(objective, bounds, n_iterations, step_size, start_pt):
     
-    solution = None
+    solution = start_pt
     
-    while solution is None or not in_bounds(solution, bounds): 
+    solution_eval = objective(solution)
     
-        solution = bounds[:,0] + rand(len(bounds))*(bounds[:,1] - bounds[:,0])
-
-        solution_eval = objective(solution)
+    for i in range(n_iterations):
     
-        for i in range(n_iterations):
+        candidate = None
+    
+        while candidate is None or not in_bounds(candidate, bounds): 
+    
             candidate = solution + randn(len(bounds))*step_size
-        
+
             candidate_eval = objective(candidate)
+           
         
             if candidate_eval <= solution_eval:
                 solution, solution_eval = candidate, candidate_eval
@@ -88,18 +90,6 @@ def hillclimbing(objective, bounds, n_iterations, step_size):
             
     return [solution, solution_eval] 
 
-
-bounds = np.asarray([[-5.0,5.0], [-5.0, 5.0]])
-
-n_iterations = 1000
-
-step_size = 0.05
-
-best, score = hillclimbing(objective, bounds, n_iterations, step_size)
-
-print("Done!")
-
-print('f(%s) = %.5f' %(best, score))
 
 # Stochastic Hill Climbing with Random Restarts
 
@@ -115,7 +105,7 @@ def random_restarts(objective, bounds, n_iterations, step_size, n_restarts):
             
             start_pt = bounds[:,0] + rand(len(bounds))*(bounds[:,1] - bounds[:,0])
 
-            solution, solution_eval = hillclimbing(objective, bounds, n_iterations, step_size)
+            solution, solution_eval = hillclimbing(objective, bounds, n_iterations, step_size, start_pt)
             
             if solution_eval < best_eval:
                 
@@ -143,7 +133,13 @@ print('f(%s) = %.5f' %(best, score))
 
 def iterated_local_search(objective, bounds, n_iterations, step_size, n_restarts, p_size):
     
-    best, best_eval = None, 1E+10
+    best = None
+    
+    while best is None or not in_bounds(best, bounds): 
+        
+        best = bounds[:,0] + rand(len(bounds))*(bounds[:,1] - bounds[:,0])
+        
+        best_eval = objective(best)
     
     for n in range(n_restarts):
         
@@ -151,9 +147,9 @@ def iterated_local_search(objective, bounds, n_iterations, step_size, n_restarts
         
         while start_pt is None or not in_bounds(start_pt, bounds): 
             
-            start_pt = bounds[:,0] + randn(len(bounds))*p_size
+            start_pt = best + randn(len(bounds))*p_size
 
-            solution, solution_eval = hillclimbing(objective, bounds, n_iterations, step_size)
+            solution, solution_eval = hillclimbing(objective, bounds, n_iterations, step_size, start_pt)
             
             if solution_eval < best_eval:
                 
