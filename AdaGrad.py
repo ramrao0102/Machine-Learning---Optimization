@@ -125,7 +125,7 @@ bounds = np.asarray([[-1.0,1.0], [-1.0, 1.0]])
 
 xaxis = arange(bounds[0,0], bounds[0,1], 0.1)
 
-xaxis = arange(bounds[1,0], bounds[1,1], 0.1)
+yaxis = arange(bounds[1,0], bounds[1,1], 0.1)
 
 x,y = meshgrid(xaxis, yaxis)
 
