@@ -87,12 +87,12 @@ def adagrad(objective, derivative, bounds, n_iterations, step_size):
     sq_grad_sums = []
     
     solutions = []
+        
+    for _ in range(bounds.shape[0]):
+        sq_grad_sums.append(0.0)
     
     for it in range(n_iterations):
 
-        for _ in range(bounds.shape[0]):
-            sq_grad_sums.append(0.0)
-    
         gradient = derivative(solution[0] , solution[1])    
 
 
