@@ -13,6 +13,8 @@ from numpy.random import seed
 from numpy.random import rand
 from matplotlib import pyplot
 
+seed(1)
+
 def objective(x):
     
     return x **2.0
