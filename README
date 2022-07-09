@@ -4,7 +4,7 @@ Optima for several functions are being developed here.
 
 1) Random and Grid Search to find optima in 1-D and 2-D function spaces
 
-2) Brent Optimization from scipy for simple convex and non convex univariate functions
+2) Brent Optimization from Scipy for simple convex and non convex univariate functions
 
 3) Nelder Meade for non differentiable functions, including the Ackley function
 
