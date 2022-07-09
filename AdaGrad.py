@@ -135,6 +135,6 @@ pyplot.contour(x ,y, results, 50, alpha = 1.0, cmap = 'jet')
 
 solutions = np.asarray(solutions)
 
-pyplot.plot(solutions[:,0], solutions[:,1], '-', color = 'r')
+pyplot.plot(solutions[:,0], solutions[:,1], '.-', color = 'r')
 
 pyplot.show() 
