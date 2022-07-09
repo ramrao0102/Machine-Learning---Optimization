@@ -79,18 +79,19 @@ def derivative(x,y):
 
 bounds = np.asarray([[-1.0,1.0], [-1.0, 1.0]])
 
+sq_grad_sums = []
+
+for _ in range(bounds.shape[0]):
+    sq_grad_sums.append(0.0)
+
 
 def adagrad(objective, derivative, bounds, n_iterations, step_size):
 
     solution = bounds[:,0] + rand(len(bounds))*(bounds[:,1]- bounds[:,0])
-
-    sq_grad_sums = []
-    
+   
     solutions = []
         
-    for _ in range(bounds.shape[0]):
-        sq_grad_sums.append(0.0)
-    
+       
     for it in range(n_iterations):
 
         gradient = derivative(solution[0] , solution[1])    

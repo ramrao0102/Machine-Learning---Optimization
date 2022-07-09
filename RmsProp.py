@@ -55,7 +55,7 @@ bounds = np.asarray([[-1.0,1.0], [-1.0, 1.0]])
 
 xaxis = arange(bounds[0,0], bounds[0,1], 0.1)
 
-xaxis = arange(bounds[1,0], bounds[1,1], 0.1)
+yaxis = arange(bounds[1,0], bounds[1,1], 0.1)
 
 x,y = meshgrid(xaxis, yaxis)
 
@@ -81,19 +81,18 @@ def derivative(x,y):
 
 bounds = np.asarray([[-1.0,1.0], [-1.0, 1.0]])
 
+sq_grad_avg = []
+
+for _ in range(bounds.shape[0]):
+    sq_grad_avg.append(0.0)
 
 def rmsprop(objective, derivative, bounds, n_iterations, step_size, rho):
 
     solution = bounds[:,0] + rand(len(bounds))*(bounds[:,1]- bounds[:,0])
 
-    sq_grad_avg = []
-    
     solutions = []
     
     for it in range(n_iterations):
-
-        for _ in range(bounds.shape[0]):
-            sq_grad_avg.append(0.0)
     
         gradient = derivative(solution[0] , solution[1])    
 
