@@ -14,11 +14,11 @@ Optima for several functions are being developed here.
 
 6) Stochastic Hill Climbing
 
-7) Iterated Local Search
+7) Iterated Local Search - Local Optimization
 
-8) Genetic Algorithm
+8) Genetic Algorithm - Global Optimization, Only with Binary Bits
 
-9) Simulated Annealing
+9) Simulated Annealing - Extension of Stochastic Hill Attempts Global Optimization
 
 10) Gradient Descent Optimization
 
