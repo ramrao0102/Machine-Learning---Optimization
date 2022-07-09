@@ -30,4 +30,6 @@ Optima for several functions are being developed here.
 
 14) Gradient Descent with RmsProp
 
-15) Gradient Descent with Adam
+15) Gradient Descent with Adadelta
+
+16) Gradient Descent with Adam
