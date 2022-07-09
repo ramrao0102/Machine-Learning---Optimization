@@ -13,11 +13,6 @@ from numpy.random import seed
 from numpy.random import rand
 from matplotlib import pyplot
 
-
-r_min, r_max = -5.0, 5.0
-
-seed(1)
-
 def objective(x):
     
     return x **2.0
