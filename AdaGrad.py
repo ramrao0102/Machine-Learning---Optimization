@@ -69,7 +69,7 @@ pyplot.show()
 
 step_size = 0.1
 
-n_iterations =50
+n_iterations =100
 
 def objective(x,y):
     return x ** 2.0 + y ** 2.0
