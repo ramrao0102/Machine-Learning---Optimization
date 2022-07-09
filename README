@@ -14,18 +14,20 @@ Optima for several functions are being developed here.
 
 6) Stochastic Hill Climbing - Local Optimization
 
-7) Iterated Local Search - Local Optimization
+7) Stochastic Hill Climbing with Random Restarts - Local Optimization
 
-8) Genetic Algorithm - Global Optimization, Only with Binary Bits
+8) Iterated Local Search - Local Optimization
 
-9) Simulated Annealing - Extension of Stochastic Hill Attempts Global Optimization
+9) Genetic Algorithm - Global Optimization, Only with Binary Bits
 
-10) Gradient Descent Optimization
+10) Simulated Annealing - Extension of Stochastic Hill Attempts Global Optimization
 
-11) Gradient Descent with Momentum
+11) Gradient Descent Optimization
 
-12) Gradient Descent with AdaGrad
+12) Gradient Descent with Momentum
 
-13) Gradient Descent with RmsProp
+13) Gradient Descent with AdaGrad
 
-14) Gradient Descent with Adam
+14) Gradient Descent with RmsProp
+
+15) Gradient Descent with Adam
